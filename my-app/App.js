@@ -1,11 +1,14 @@
-import { StatusBar } from "expo-status-bar";
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./Screens/HomeScreen";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import LoginScreen from "./Screens/LoginScreen";
 // import RouletteScreen from "./Screens/RouletteScreen";
 // import SlotMachineScreen from "./Screens/SlotMachineScreen";
 // import SpinTheWheelScreen from "./Screens/SpinTheWheelScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
 	return (
