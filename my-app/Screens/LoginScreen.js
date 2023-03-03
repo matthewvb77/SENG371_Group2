@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import { auth, db, doc, getDoc } from "../firebase";
+import { auth, db, doc, getDoc, signInWithEmailAndPassword } from "../firebase";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
