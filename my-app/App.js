@@ -9,7 +9,6 @@ import RouletteScreen from "./Screens/RouletteScreen";
 import SlotMachineScreen from "./Screens/SlotMachineScreen";
 import SpinTheWheelScreen from "./Screens/SpinTheWheelScreen";
 
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -17,16 +16,16 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          name='Login'
+          component={LoginScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name='Register'
           component={RegisterScreen}
           options={{ headerShown: false }}
         />
         <Stack.Screen name='Dashboard' component={DashboardScreen} />
-        <Stack.Screen
-          name='Login'
-          component={LoginScreen}
-          options={{ headerShown: false }}
-        />
         <Stack.Screen name='Roulette' component={RouletteScreen} />
         <Stack.Screen name='Slots' component={SlotMachineScreen} />
         <Stack.Screen name='Spin The Wheel' component={SpinTheWheelScreen} />

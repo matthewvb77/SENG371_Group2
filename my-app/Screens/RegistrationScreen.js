@@ -60,7 +60,6 @@ const RegisterScreen = ({ navigation }) => {
           autoCapitalize='none'
           blurOnSubmit={true}
           secureTextEntry={true}
-          inputMode='password'
           returnKeyType='next'
           textContentType='password'
           onChangeText={(value) => setPassword(value)}
@@ -71,7 +70,6 @@ const RegisterScreen = ({ navigation }) => {
           autoCapitalize='none'
           blurOnSubmit={true}
           secureTextEntry={true}
-          inputMode='password'
           returnKeyType='done'
           textContentType='password'
           onChangeText={(value) => setConfirmPassword(value)}
