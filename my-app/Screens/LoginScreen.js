@@ -13,63 +13,11 @@ import {
   doc,
   getDoc,
   signInWithEmailAndPassword,
-  GoogleAuthProvider,
 } from "../firebase";
-import * as WebBrowser from "expo-web-browser";
-import * as Crypto from "expo-crypto";
-import {
-  makeRedirectUri,
-  useAuthRequest,
-  ResponseType,
-} from "expo-auth-session";
-
-WebBrowser.maybeCompleteAuthSession();
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const redirectUri = makeRedirectUri({ useProxy: true });
-
-  const [request, response, promptAsync] = useAuthRequest(
-    {
-      responseType: ResponseType.Token,
-      clientId:
-        "162824721551-inb5r4haq77q7k5rf7a2acorgppbv951.apps.googleusercontent.com",
-      scopes: ["openid", "profile", "email"],
-      redirectUri: redirectUri,
-    },
-    {
-      authorizationEndpoint: "https://accounts.google.com/o/oauth2/v2/auth",
-      tokenEndpoint: "https://oauth2.googleapis.com/token",
-      revocationEndpoint: "https://oauth2.googleapis.com/revoke",
-    }
-  );
-
-  useEffect(() => {
-    if (response?.type === "success") {
-      const { access_token } = response.params;
-
-      const credential = auth.GoogleAuthProvider.credential(access_token);
-
-      auth
-        .signInWithCredential(credential)
-        .then((userCredentials) => {
-          const uid = userCredentials.user.uid;
-          getDoc(doc(db, "users", uid)).then((docSnap) => {
-            if (docSnap.exists()) {
-              const user = docSnap.data();
-              navigation.navigate("Dashboard", { user: user });
-            } else {
-              console.log("No such document");
-            }
-          });
-        })
-        .catch((error) => {
-          alert(error);
-        });
-    }
-  }, [response]);
 
   const handleLoginPress = () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -90,16 +38,7 @@ const LoginScreen = ({ navigation }) => {
   };
 
   const handleGoogleLoginPress = async () => {
-    const state = await Crypto.getRandomBytesAsync(6).then((bytes) => {
-      return bytes.reduce(
-        (str, byte) => str + byte.toString(16).padStart(2, "0"),
-        ""
-      );
-    });
-
-    const authUrl = `${request.url}&state=${state}`;
-
-    promptAsync({ authUrl });
+    //
   };
 
   return (
