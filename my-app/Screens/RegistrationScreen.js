@@ -46,16 +46,34 @@ const RegisterScreen = ({ navigation }) => {
         <TextInput
           className='h-12 px-4 bg-gray-100 border border-gray-500 rounded-lg mb-4'
           placeholder='Email'
+          autoCapitalize='none'
+          blurOnSubmit={true}
+          inputMode='email'
+          keyboardType='email-address'
+          returnKeyType='next'
+          textContentType='emailAddress'
           onChangeText={(value) => setEmail(value)}
         />
         <TextInput
           className='h-12 px-4 bg-gray-100 border border-gray-500 rounded-lg mb-4'
           placeholder='Password'
+          autoCapitalize='none'
+          blurOnSubmit={true}
+          secureTextEntry={true}
+          inputMode='password'
+          returnKeyType='next'
+          textContentType='password'
           onChangeText={(value) => setPassword(value)}
         />
         <TextInput
           className='h-12 px-4 bg-gray-100 border border-gray-500 rounded-lg mb-4'
           placeholder='Password'
+          autoCapitalize='none'
+          blurOnSubmit={true}
+          secureTextEntry={true}
+          inputMode='password'
+          returnKeyType='done'
+          textContentType='password'
           onChangeText={(value) => setConfirmPassword(value)}
         />
         <TouchableOpacity
