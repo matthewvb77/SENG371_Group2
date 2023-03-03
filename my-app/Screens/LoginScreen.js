@@ -198,7 +198,7 @@ const LoginScreen = ({ navigation }) => {
 
         <TouchableOpacity
           onPress={handleGoogleLoginPress}
-          className='items-center justify-center flex flex-row space-x-5 bg-gray-200 py-3 px-6 rounded-lg'
+          className='items-center justify-center flex flex-row space-x-5 bg-gray-700 py-3 px-6 rounded-lg'
         >
           <Image
             className='h-6 w-6'
@@ -206,7 +206,7 @@ const LoginScreen = ({ navigation }) => {
               uri: "https://i.ibb.co/j82DCcR/search.png",
             }}
           />
-          <Text className='text-lg '>Sign in with Google</Text>
+          <Text className='text-lg text-white'>Sign in with Google</Text>
         </TouchableOpacity>
       </View>
       <View className='flex items-center mt-6'>
