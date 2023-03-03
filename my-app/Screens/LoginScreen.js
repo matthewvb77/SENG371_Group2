@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, TouchableOpacity } from "react-native";
-import { auth, signInWithEmailAndPassword, db, doc, getDoc } from "../firebase";
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  TouchableOpacity,
+  Image,
+} from "react-native";
+import { auth, db, doc, getDoc } from "../firebase";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
@@ -22,6 +29,10 @@ const LoginScreen = ({ navigation }) => {
       .catch((error) => {
         alert(error);
       });
+  };
+
+  const handleGoogleLoginPress = () => {
+    // TODO
   };
 
   return (
@@ -46,11 +57,18 @@ const LoginScreen = ({ navigation }) => {
         >
           <Text className='text-lg text-white'>Login</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
-          onPress={() => console.log("google pressed")}
-          className='items-center bg-blue-500 text-white py-3 px-6 rounded-lg'
+          onPress={handleGoogleLoginPress}
+          className='items-center justify-center flex flex-row space-x-5 bg-gray-200 py-3 px-6 rounded-lg'
         >
-          <Text className='text-lg text-white'>Login with Google</Text>
+          <Image
+            className='h-6 w-6'
+            source={{
+              uri: "https://i.ibb.co/j82DCcR/search.png",
+            }}
+          />
+          <Text className='text-lg '>Sign in with Google</Text>
         </TouchableOpacity>
       </View>
       <View className='flex items-center mt-6'>
