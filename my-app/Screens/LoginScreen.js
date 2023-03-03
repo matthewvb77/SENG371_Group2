@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
+import React, { useState } from "react";
+import { View, Text, TextInput, Button, TouchableOpacity } from "react-native";
+import { auth, signInWithEmailAndPassword, db, doc, getDoc } from "../firebase";
 
 const LoginScreen = ({ navigation }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleSubmit = () => {
-    signInWithEmailAndPassword(auth, email, password.password)
+  const handleLoginPress = () => {
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         const uid = userCredentials.user.uid;
-        getDoc(doc(db, 'users', uid)).then((docSnap) => {
+        getDoc(doc(db, "users", uid)).then((docSnap) => {
           if (docSnap.exists()) {
             const user = docSnap.data();
-            navigation.navigate('HomeScene', { user: user });
+            navigation.navigate("Dashboard", { user: user });
           } else {
-            console.log('No such document');
+            console.log("No such document");
           }
         });
       })
@@ -24,7 +25,7 @@ const LoginScreen = ({ navigation }) => {
   };
 
   return (
-    <View className='flex-1'>
+    <View className='flex-1 pt-10'>
       <View className='flex items-center'>
         <Text className='text-4xl font-bold mt-12'>Login</Text>
       </View>
@@ -39,15 +40,17 @@ const LoginScreen = ({ navigation }) => {
           placeholder='Password'
           onChangeText={(value) => setPassword(value)}
         />
-        <TouchableOpacity className='items-center bg-blue-500 text-white py-3 px-6 rounded-lg mb-4'>
-          <Text className='text-lg text-white' onPress={handleSubmit}>
-            Login
-          </Text>
+        <TouchableOpacity
+          onPress={handleLoginPress}
+          className='items-center bg-blue-500 text-white py-3 px-6 rounded-lg mb-4'
+        >
+          <Text className='text-lg text-white'>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity className='items-center bg-blue-500 text-white py-3 px-6 rounded-lg'>
-          <Text className='text-lg text-white' onPress={handleSubmit}>
-            Login with Google
-          </Text>
+        <TouchableOpacity
+          onPress={() => console.log("google pressed")}
+          className='items-center bg-blue-500 text-white py-3 px-6 rounded-lg'
+        >
+          <Text className='text-lg text-white'>Login with Google</Text>
         </TouchableOpacity>
       </View>
       <View className='flex items-center mt-6'>
@@ -56,9 +59,9 @@ const LoginScreen = ({ navigation }) => {
           Don't have an account?
           <Text
             className='font-bold'
-            onPress={() => navigation.navigate('Register')}
+            onPress={() => navigation.navigate("Register")}
           >
-            {' '}
+            {" "}
             Sign Up
           </Text>
         </Text>
