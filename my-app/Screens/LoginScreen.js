@@ -38,7 +38,6 @@ const LoginScreen = ({ navigation }) => {
         "162824721551-inb5r4haq77q7k5rf7a2acorgppbv951.apps.googleusercontent.com",
       scopes: ["openid", "profile", "email"],
       redirectUri: redirectUri,
-      codeVerifier: "",
     },
     {
       authorizationEndpoint: "https://accounts.google.com/o/oauth2/v2/auth",
@@ -112,11 +111,24 @@ const LoginScreen = ({ navigation }) => {
         <TextInput
           className='h-12 px-4 bg-gray-100 border border-gray-500 rounded-lg mb-4'
           placeholder='Email'
+          autoCapitalize='none'
+          blurOnSubmit={true}
+          inputMode='email'
+          keyboardType='email-address'
+          returnKeyType='next'
+          textContentType='emailAddress'
           onChangeText={(value) => setEmail(value)}
         />
         <TextInput
           className='h-12 px-4 bg-gray-100 border border-gray-500 rounded-lg mb-4'
           placeholder='Password'
+          autoCapitalize='none'
+          blurOnSubmit={true}
+          secureTextEntry={true}
+          inputMode='password'
+          clearTextOnFocus={true}
+          returnKeyType='done'
+          textContentType='password'
           onChangeText={(value) => setPassword(value)}
         />
         <TouchableOpacity
