@@ -1,11 +1,17 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const DashboardScreen = () => {
+const DashboardScreen = ({ navigation }) => {
 	return (
-		<View>
+		<View className='flex items-center mt-6'>
 			<Text>Dashboard</Text>
-		</View>
+			<Text
+			className='font-bold text-lg'
+			onPress={() => navigation.navigate("Login")}
+			>
+			Login
+			</Text>
+      </View>
 	);
 };
 
