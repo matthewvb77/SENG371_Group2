@@ -1,11 +1,11 @@
 import React from "react";
+import renderer from "react-test-renderer";
 
 import RouletteScreen from "../../Screens/RouletteScreen";
 
 describe("<RouletteScreen />", () => {
-	it("boilerplate empty test", () => {
-		// arrange
-		// act
-		// assert
+	it("renders correctly", () => {
+		const tree = renderer.create(<RouletteScreen />).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });

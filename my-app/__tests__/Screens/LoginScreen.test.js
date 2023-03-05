@@ -1,11 +1,11 @@
 import React from "react";
+import renderer from "react-test-renderer";
 
 import LoginScreen from "../../Screens/LoginScreen";
 
 describe("<LoginScreen />", () => {
-	it("boilerplate empty test", () => {
-		// arrange
-		// act
-		// assert
+	it("renders correctly", () => {
+		const tree = renderer.create(<LoginScreen />).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });

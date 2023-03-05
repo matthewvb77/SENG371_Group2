@@ -1,11 +1,11 @@
 import React from "react";
+import renderer from "react-test-renderer";
 
 import SpinTheWheelScreen from "../../Screens/SpinTheWheelScreen";
 
 describe("<SpinTheWheelScreen />", () => {
-	it("boilerplate empty test", () => {
-		// arrange
-		// act
-		// assert
+	it("renders correctly", () => {
+		const tree = renderer.create(<SpinTheWheelScreen />).toJSON();
+		expect(tree).toMatchSnapshot();
 	});
 });

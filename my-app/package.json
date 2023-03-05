@@ -12,7 +12,7 @@
 	"jest": {
 		"preset": "jest-expo",
 		"transformIgnorePatterns": [
-			"node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+			"node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg|@react-navigation/native-stack|@react-navigation/native)"
 		]
 	},
 	"dependencies": {
@@ -35,7 +35,7 @@
 		"react-native-screens": "3.20.0",
 		"react-native-web": "^0.18.12",
 		"react-navigation": "^4.4.4",
-		"react-test-renderer": "^18.2.0",
+		"react-test-renderer": "18.2.0",
 		"tailwind-rn": "^4.2.0"
 	},
 	"devDependencies": {
