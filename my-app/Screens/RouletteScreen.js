@@ -4,15 +4,16 @@ import Button from '../components/Button';
 import { Diamond } from 'phosphor-react-native';
 
 const RouletteScreen = () => {
-  const [bet, setBet] = useState(0);
+  const [bet, setBet] = useState(10);
+  const [gameOver, setGameOver] = useState(false);
   const [result, setResult] = useState({
     num: null,
     color: 'text-gray-900',
     isEven: false,
     is1to18: false,
     is19to36: false,
+    win: null,
   });
-
   const [buttonStates, setButtonStates] = useState({
     range: [false, false],
     evenOdd: [false, false],
@@ -32,15 +33,44 @@ const RouletteScreen = () => {
   };
 
   const spin = () => {
-    random = Math.floor(Math.random() * 36) + 1;
-    const result = {
-      num: random,
-      color: board[random],
-      isEven: random % 2 === 0,
-      is1to18: random >= 1 && random <= 18,
-      is19to36: random >= 19 && random <= 36,
-    };
-    setResult(result);
+    if (
+      (buttonStates.range[0] ||
+        buttonStates.range[1] ||
+        buttonStates.evenOdd[0] ||
+        buttonStates.evenOdd[1] ||
+        buttonStates.blackRed[0] ||
+        buttonStates.blackRed[1]) &&
+      bet > 0
+    ) {
+      random = Math.floor(Math.random() * 36) + 1;
+
+      const result = {
+        num: random,
+        color: board[random],
+        isEven: random % 2 === 0,
+        is1to18: random >= 1 && random <= 18,
+        is19to36: random >= 19 && random <= 36,
+      };
+
+      if (
+        (buttonStates.range[0] && result.is1to18) ||
+        (buttonStates.range[1] && result.is19to36) ||
+        (buttonStates.evenOdd[0] && result.isEven) ||
+        (buttonStates.evenOdd[1] && !result.isEven) ||
+        (buttonStates.blackRed[0] && result.color === 'text-gray-900') ||
+        (buttonStates.blackRed[1] && result.color === 'text-rose-500')
+      ) {
+        result['win'] = true;
+      } else {
+        result['win'] = false;
+      }
+      setGameOver(true);
+      setResult(result);
+    } else if (gameOver) {
+      // bet to start again
+    } else {
+      alert('Place a bet!');
+    }
   };
 
   const board = {
@@ -88,9 +118,26 @@ const RouletteScreen = () => {
   return (
     <View className='flex flex-col h-full w-full justify-center items-center'>
       <View className='m-10'>
-        <Text className={`text-bold font-black text-5xl ${result.color}`}>
-          {result.num || 'PLACE A BET!'}
-        </Text>
+        {(gameOver && (
+          <>
+            <Text
+              className={`text-bold font-black text-5xl text-center text-gray-900`}
+            >
+              {result.win ? 'WIN' : 'LOSE'}
+            </Text>
+            <Text
+              className={`text-bold font-black text-5xl text-center ${result.color}`}
+            >
+              {result.num}
+            </Text>
+          </>
+        )) || (
+          <Text
+            className={`text-bold font-black text-5xl text-center text-gray-900`}
+          >
+            PLACE A BET!
+          </Text>
+        )}
       </View>
       <View className='flex justify-center content-center h-1/3 mb-7'>
         <View className='flex flex-row mt-6 mx-5 space-5'>
