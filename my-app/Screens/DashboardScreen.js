@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const DashboardScreen = ({ navigation }) => {
+const DashboardScreen = ({ navigation, blah-this-will-break-the-build }) => {
 	return (
 		<View className='flex items-center mt-6'>
 			<Text>Dashboard</Text>
