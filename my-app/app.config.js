@@ -21,14 +21,16 @@ export default {
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.group2.casino"
+      "bundleIdentifier": "com.group2.casino",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.group2.casino"
+      "package": "com.group2.casino",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -40,6 +42,7 @@ export default {
       firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,
       firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
       firebaseAppId: process.env.FIREBASE_APP_ID
-    }
+    },
+    "scheme": "my-app"
   }
 }

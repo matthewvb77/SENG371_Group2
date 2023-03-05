@@ -7,17 +7,47 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
-import {
-  auth,
-  db,
-  doc,
-  getDoc,
-  signInWithEmailAndPassword,
-} from "../firebase";
+import { auth, db, doc, getDoc, signInWithEmailAndPassword } from "../firebase";
+import * as WebBrowser from "expo-web-browser";
+import * as Google from "expo-auth-session/providers/google";
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [token, setToken] = useState("");
+  const [userInfo, setUserInfo] = useState(null);
+
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId:
+      "162824721551-9u964a98m0uk5pl7jjf8b3nfjg3ut4ut.apps.googleusercontent.com",
+    iosClientId:
+      "162824721551-inb5r4haq77q7k5rf7a2acorgppbv951.apps.googleusercontent.com",
+    expoClientId:
+      "162824721551-9u964a98m0uk5pl7jjf8b3nfjg3ut4ut.apps.googleusercontent.com",
+  });
+
+  useEffect(() => {
+    if (response?.type === "success") {
+      setToken(response.authentication.accessToken);
+      getUserInfo();
+    }
+  }, [response, token]);
+
+  const getUserInfo = async () => {
+    try {
+      const response = await fetch(
+        "https://www.googleapis.com/userinfo/v2/me",
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+      console.log('here');
+      const user = await response.json();
+      setUserInfo(user);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleLoginPress = () => {
     signInWithEmailAndPassword(auth, email, password)
@@ -38,7 +68,40 @@ const LoginScreen = ({ navigation }) => {
   };
 
   const handleGoogleLoginPress = async () => {
-    //
+    let result = await WebBrowser.openBrowserAsync(
+      "https://accounts.google.com/gsi/client"
+    );
+    console.log(result);
+
+    // // sign into firebase with google
+    // signInWithPopup(auth, provider)
+    //   .then((result) => {
+    //     // get the user
+    //     const user = result.user;
+    //     // check if the user exists in the firestore
+    //     getDoc(doc(db, "users", user.uid)).then((docSnap) => {
+    //       if (docSnap.exists()) {
+    //         // if the user exists, navigate to the dashboard
+    //         navigation.navigate("Dashboard", { user: user });
+    //       } else {
+    //         // if the user doesn't exist, create the user in the firestore and navigate to the dashboard
+    //         const data = {
+    //           uid: user.uid,
+    //           email: user.email,
+    //           displayName: user.displayName,
+    //           photoURL: user.photoURL,
+    //         };
+    //         setDoc(doc(db, "users", user.uid), data)
+    //           .then(navigation.navigate("Dashboard", { user: data }))
+    //           .catch((error) => {
+    //             alert(error);
+    //           });
+    //       }
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     alert(error);
+    //   });
   };
 
   return (
@@ -64,7 +127,6 @@ const LoginScreen = ({ navigation }) => {
           autoCapitalize='none'
           blurOnSubmit={true}
           secureTextEntry={true}
-          inputMode='password'
           clearTextOnFocus={true}
           returnKeyType='done'
           textContentType='password'
@@ -78,7 +140,7 @@ const LoginScreen = ({ navigation }) => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          onPress={handleGoogleLoginPress}
+          onPress={() => promptAsync()}
           className='items-center justify-center flex flex-row space-x-5 bg-gray-700 py-3 px-6 rounded-lg'
         >
           <Image
