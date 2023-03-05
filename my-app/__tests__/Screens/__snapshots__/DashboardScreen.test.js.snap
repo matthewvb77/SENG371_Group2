@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DashboardScreen /> renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "display": "flex",
+      },
+      {
+        "alignItems": "center",
+      },
+      {
+        "marginTop": 24,
+      },
+    ]
+  }
+>
+  <Text>
+    Dashboard
+  </Text>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 24,
+        },
+        {
+          "backgroundColor": "#f43f5e",
+        },
+        {
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+        },
+        {
+          "borderBottomLeftRadius": 9999,
+          "borderBottomRightRadius": 9999,
+          "borderTopLeftRadius": 9999,
+          "borderTopRightRadius": 9999,
+        },
+        {
+          "borderBottomWidth": 2,
+          "borderLeftWidth": 2,
+          "borderRightWidth": 2,
+          "borderTopWidth": 2,
+        },
+        {
+          "borderBottomColor": "#be123c",
+          "borderLeftColor": "#be123c",
+          "borderRightColor": "#be123c",
+          "borderTopColor": "#be123c",
+        },
+        {
+          "width": "50%",
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        [
+          {
+            "fontWeight": "700",
+          },
+          {
+            "fontSize": 18,
+            "lineHeight": 28,
+          },
+          {
+            "color": "#fff",
+          },
+          {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Roulette
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 24,
+        },
+        {
+          "backgroundColor": "#f43f5e",
+        },
+        {
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+        },
+        {
+          "borderBottomLeftRadius": 9999,
+          "borderBottomRightRadius": 9999,
+          "borderTopLeftRadius": 9999,
+          "borderTopRightRadius": 9999,
+        },
+        {
+          "borderBottomWidth": 2,
+          "borderLeftWidth": 2,
+          "borderRightWidth": 2,
+          "borderTopWidth": 2,
+        },
+        {
+          "borderBottomColor": "#be123c",
+          "borderLeftColor": "#be123c",
+          "borderRightColor": "#be123c",
+          "borderTopColor": "#be123c",
+        },
+        {
+          "width": "50%",
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        [
+          {
+            "fontWeight": "700",
+          },
+          {
+            "fontSize": 18,
+            "lineHeight": 28,
+          },
+          {
+            "color": "#fff",
+          },
+          {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Slots
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 24,
+        },
+        {
+          "backgroundColor": "#f43f5e",
+        },
+        {
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+        },
+        {
+          "borderBottomLeftRadius": 9999,
+          "borderBottomRightRadius": 9999,
+          "borderTopLeftRadius": 9999,
+          "borderTopRightRadius": 9999,
+        },
+        {
+          "borderBottomWidth": 2,
+          "borderLeftWidth": 2,
+          "borderRightWidth": 2,
+          "borderTopWidth": 2,
+        },
+        {
+          "borderBottomColor": "#be123c",
+          "borderLeftColor": "#be123c",
+          "borderRightColor": "#be123c",
+          "borderTopColor": "#be123c",
+        },
+        {
+          "width": "50%",
+        },
+      ]
+    }
+  >
+    <Text
+      onPress={[Function]}
+      style={
+        [
+          {
+            "fontWeight": "700",
+          },
+          {
+            "fontSize": 18,
+            "lineHeight": 28,
+          },
+          {
+            "color": "#fff",
+          },
+          {
+            "textAlign": "center",
+          },
+        ]
+      }
+    >
+      Spin The Wheel
+    </Text>
+  </View>
+</View>
+`;
