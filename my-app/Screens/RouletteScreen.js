@@ -13,6 +13,36 @@ const RouletteScreen = () => {
     is19to36: false,
   });
 
+  const [buttonStates, setButtonStates] = useState({
+    range: [false, false],
+    evenOdd: [false, false],
+    blackRed: [false, false],
+  });
+
+  const handleButtonPress = (name, order) => {
+    const buttonState = buttonStates[name];
+    if (order === 0) {
+      buttonState[0] = !buttonState[0];
+      if (buttonState[0]) buttonState[1] = false;
+    } else {
+      buttonState[1] = !buttonState[1];
+      if (buttonState[1]) buttonState[0] = false;
+    }
+    setButtonStates({ ...buttonStates, [name]: buttonState });
+  };
+
+  const spin = () => {
+    random = Math.floor(Math.random() * 36) + 1;
+    const result = {
+      num: random,
+      color: board[random],
+      isEven: random % 2 === 0,
+      is1to18: random >= 1 && random <= 18,
+      is19to36: random >= 19 && random <= 36,
+    };
+    setResult(result);
+  };
+
   const board = {
     0: 'text-green-700',
     1: 'text-rose-500',
@@ -53,21 +83,7 @@ const RouletteScreen = () => {
     36: 'text-rose-500',
   };
 
-  const clearBet = () => {
-    setBet(0);
-  };
-
-  const spin = () => {
-    random = Math.floor(Math.random() * 36) + 1;
-    const result = {
-      num: random,
-      color: board[random],
-      isEven: random % 2 === 0,
-      is1to18: random >= 1 && random <= 18,
-      is19to36: random >= 19 && random <= 36,
-    };
-    setResult(result);
-  };
+  const clearBet = () => setBet(0);
 
   return (
     <View className='flex flex-col h-full w-full justify-center items-center'>
@@ -79,37 +95,73 @@ const RouletteScreen = () => {
       <View className='flex justify-center content-center h-1/3 mb-7'>
         <View className='flex flex-row mt-6 mx-5 space-5'>
           <Button
-            ButtonStyle='bg-green-700 border-green-900 w-1/2 rounded-r-none'
+            ButtonStyle={`w-1/2 rounded-r-none ${
+              buttonStates['range'][0] ? 'bg-green-700 border-0' : ''
+            }`}
+            TextStyle={`${
+              buttonStates['range'][0] ? 'text-white' : 'text-gray-900'
+            }`}
             title='1 - 18'
+            onPress={() => handleButtonPress('range', 0)}
           />
           <Button
-            ButtonStyle='bg-green-700 border-green-900 w-1/2 rounded-l-none'
+            ButtonStyle={`w-1/2 rounded-l-none ${
+              buttonStates['range'][1] ? 'bg-green-700 border-0' : ''
+            }`}
+            TextStyle={`${
+              buttonStates['range'][1] ? 'text-white' : 'text-gray-900'
+            }`}
             title='19 - 36'
+            onPress={() => handleButtonPress('range', 1)}
           />
         </View>
         <View className='flex flex-row space-x-5 mt-6 mx-5'>
           <Button
-            ButtonStyle='bg-green-700 border-green-900 w-1/2 rounded-r-none'
+            ButtonStyle={`w-1/2 rounded-r-none ${
+              buttonStates['evenOdd'][0] ? 'bg-green-700 border-0' : ''
+            }`}
+            TextStyle={`${
+              buttonStates['evenOdd'][0] ? 'text-white' : 'text-gray-900'
+            }`}
             title='Even'
+            onPress={() => handleButtonPress('evenOdd', 0)}
           />
           <Button
-            ButtonStyle='bg-green-700 border-green-900 w-1/2 rounded-l-none'
+            ButtonStyle={`w-1/2 rounded-l-none ${
+              buttonStates['evenOdd'][1] ? 'bg-green-700 border-0' : ''
+            }`}
+            TextStyle={`${
+              buttonStates['evenOdd'][1] ? 'text-white' : 'text-gray-900'
+            }`}
             title='Odd'
+            onPress={() => handleButtonPress('evenOdd', 1)}
           />
         </View>
         <View className='flex flex-row space-x-5 mt-6 mx-5'>
           <Button
-            ButtonStyle='bg-green-700 border-green-900 w-1/2 rounded-r-none'
+            ButtonStyle={`w-1/2 rounded-r-none ${
+              buttonStates['blackRed'][0] ? 'bg-green-700 border-0' : ''
+            }`}
+            TextStyle={`${
+              buttonStates['blackRed'][0] ? 'text-white' : 'text-gray-900'
+            }`}
             icon={<Diamond size={40} color='#1F2937' weight='fill' />}
+            onPress={() => handleButtonPress('blackRed', 0)}
           />
           <Button
-            ButtonStyle='bg-green-700 border-green-900 w-1/2 rounded-l-none'
+            ButtonStyle={`w-1/2 rounded-l-none ${
+              buttonStates['blackRed'][1] ? 'bg-green-700 border-0' : ''
+            }`}
+            TextStyle={`${
+              buttonStates['blackRed'][1] ? 'text-white' : 'text-gray-900'
+            }`}
             icon={<Diamond size={40} color='#F43F3F' weight='fill' />}
+            onPress={() => handleButtonPress('blackRed', 1)}
           />
         </View>
         <View className='flex flex-row space-x-5 mt-6 mx-5'>
           <Button
-            ButtonStyle='bg-green-700 border-green-900 w-full'
+            ButtonStyle='bg-blue-500 border-0 w-full'
             title='SPIN'
             onPress={spin}
           />
