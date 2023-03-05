@@ -1,8 +1,8 @@
 import React from "react";
 
-import App from "../App";
+import SlotMachineScreen from "../../Screens/SlotMachineScreen";
 
-describe("<App />", () => {
+describe("<SlotMachineScreen />", () => {
 	it("boilerplate empty test", () => {
 		// arrange
 		// act

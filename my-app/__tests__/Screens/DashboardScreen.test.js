@@ -1,8 +1,8 @@
 import React from "react";
 
-import App from "../App";
+import DashboardScreen from "../../Screens/DashboardScreen";
 
-describe("<App />", () => {
+describe("<DashboardScreen />", () => {
 	it("boilerplate empty test", () => {
 		// arrange
 		// act

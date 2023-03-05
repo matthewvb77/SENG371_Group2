@@ -1,8 +1,8 @@
 import React from "react";
 
-import App from "../App";
+import LoginScreen from "../../Screens/LoginScreen";
 
-describe("<App />", () => {
+describe("<LoginScreen />", () => {
 	it("boilerplate empty test", () => {
 		// arrange
 		// act

@@ -1,8 +1,8 @@
 import React from "react";
 
-import App from "../App";
+import SpinTheWheelScreen from "../../Screens/SpinTheWheelScreen";
 
-describe("<App />", () => {
+describe("<SpinTheWheelScreen />", () => {
 	it("boilerplate empty test", () => {
 		// arrange
 		// act

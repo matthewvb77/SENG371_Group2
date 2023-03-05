@@ -1,8 +1,8 @@
 import React from "react";
 
-import App from "../App";
+import RouletteScreen from "../../Screens/RouletteScreen";
 
-describe("<App />", () => {
+describe("<RouletteScreen />", () => {
 	it("boilerplate empty test", () => {
 		// arrange
 		// act
