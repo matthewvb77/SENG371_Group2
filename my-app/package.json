@@ -16,6 +16,8 @@
     "@react-navigation/stack": "^6.3.14",
     "expo": "^48.0.5",
     "expo-status-bar": "~1.4.2",
+    "firebase": "^9.17.2",
+    "install": "^0.13.0",
     "nativewind": "^2.0.11",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
