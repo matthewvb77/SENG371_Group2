@@ -32,6 +32,10 @@ jobs:
       - name: Install dependencies
         run: yarn install
         working-directory: my-app
+        
+      - name: Run Tests
+        run: yarn test -u
+        working-directory: my-app
 
       - name: Publish update
         run: eas update --auto
