@@ -21,14 +21,16 @@ export default {
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true,
-			"bundleIdentifier": "com.matthewvb77.myapp"
+			"bundleIdentifier": "com.matthewvb77.myapp",
+      "googleServicesFile": "./GoogleService-Info.plist"
 		},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#FFFFFF"
 			},
-			"package": "com.matthewvb77.myapp"
+			"package": "com.matthewvb77.myapp",
+      "googleServicesFile": "./google-services.json"
 		},
 		"web": {
 			"favicon": "./assets/favicon.png"
@@ -46,6 +48,7 @@ export default {
 		},
 		"runtimeVersion": {
 			"policy": "sdkVersion"
-		}
+		},
+    "scheme": "my-app"
 	}
 }

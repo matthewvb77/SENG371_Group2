@@ -5,7 +5,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
-  signInWithPopup,
 } from "firebase/auth";
 import {
   getFirestore,
@@ -41,6 +40,4 @@ export {
   doc,
   getDoc,
   setDoc,
-  provider,
-  signInWithPopup,
 };
