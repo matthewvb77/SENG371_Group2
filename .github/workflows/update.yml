@@ -16,12 +16,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - run: cd my-app
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: yarn
+          cache-dependency-path: my-app/package.json
 
       - name: Setup EAS
         uses: expo/expo-github-action@v8
