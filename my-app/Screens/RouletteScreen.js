@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import { Diamond } from 'phosphor-react-native';
 
 const RouletteScreen = () => {
-  const [bet, setBet] = useState(10);
+  const [bet, setBet] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [result, setResult] = useState({
     num: null,
@@ -66,8 +66,7 @@ const RouletteScreen = () => {
       }
       setGameOver(true);
       setResult(result);
-    } else if (gameOver) {
-      // bet to start again
+      setBet(0);
     } else {
       alert('Place a bet!');
     }
@@ -113,20 +112,18 @@ const RouletteScreen = () => {
     36: 'text-rose-500',
   };
 
-  const clearBet = () => setBet(0);
-
   return (
     <View className='flex flex-col h-full w-full justify-center items-center'>
-      <View className='m-10'>
+      <View className='m-10 py-10'>
         {(gameOver && (
           <>
             <Text
-              className={`text-bold font-black text-5xl text-center text-gray-900`}
+              className={`text-bold font-black text-7xl text-center text-gray-900`}
             >
               {result.win ? 'WIN' : 'LOSE'}
             </Text>
             <Text
-              className={`text-bold font-black text-5xl text-center ${result.color}`}
+              className={`text-bold font-black text-7xl text-center ${result.color}`}
             >
               {result.num}
             </Text>
@@ -139,7 +136,25 @@ const RouletteScreen = () => {
           </Text>
         )}
       </View>
-      <View className='flex justify-center content-center h-1/3 mb-7'>
+      <View className='flex justify-center content-center pb-10'>
+        <View className='flex flex-row space-5 mx-5'>
+          <Button
+            ButtonStyle='w-1/3 rounded-r-none bg-gray-600'
+            title='$1'
+            onPress={() => setBet(bet + 1)}
+          />
+          <Button
+            ButtonStyle='w-1/3 rounded-none bg-gray-600'
+            title='$10'
+            onPress={() => setBet(bet + 10)}
+          />
+          <Button
+            ButtonStyle='w-1/3 rounded-l-none bg-gray-600'
+            title='$100'
+            onPress={() => setBet(bet + 100)}
+          />
+        </View>
+
         <View className='flex flex-row mt-6 mx-5 space-5'>
           <Button
             ButtonStyle={`w-1/2 rounded-r-none ${
@@ -213,6 +228,9 @@ const RouletteScreen = () => {
             onPress={spin}
           />
         </View>
+        <Text className='text-black text-center text-3xl font-bold pt-10'>
+          Bet: ${bet}
+        </Text>
       </View>
     </View>
   );
