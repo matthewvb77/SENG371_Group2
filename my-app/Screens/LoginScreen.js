@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
 	View,
 	Text,
@@ -7,7 +7,23 @@ import {
 	TouchableOpacity,
 	Image,
 } from "react-native";
-import { auth, db, doc, getDoc, signInWithEmailAndPassword } from "../firebase";
+import {
+	auth,
+	db,
+	doc,
+	getDoc,
+	signInWithEmailAndPassword,
+	GoogleAuthProvider,
+} from "../firebase";
+import * as WebBrowser from "expo-web-browser";
+import * as Crypto from "expo-crypto";
+import {
+	makeRedirectUri,
+	useAuthRequest,
+	ResponseType,
+} from "expo-auth-session";
+
+WebBrowser.maybeCompleteAuthSession();
 
 const LoginScreen = ({ navigation }) => {
 	const [email, setEmail] = useState("");
