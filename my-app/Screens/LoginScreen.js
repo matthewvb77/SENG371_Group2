@@ -36,7 +36,6 @@ const LoginScreen = ({ navigation }) => {
         "162824721551-inb5r4haq77q7k5rf7a2acorgppbv951.apps.googleusercontent.com",
       scopes: ["openid", "profile", "email"],
       redirectUri: redirectUri,
-      codeVerifier: "",
     },
     {
       authorizationEndpoint: "https://accounts.google.com/o/oauth2/v2/auth",
