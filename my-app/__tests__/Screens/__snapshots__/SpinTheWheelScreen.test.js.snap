@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SpinTheWheelScreen /> renders correctly 1`] = `
+<View>
+  <Text>
+    Spin the Wheel
+  </Text>
+</View>
+`;
