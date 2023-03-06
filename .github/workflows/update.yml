@@ -13,10 +13,10 @@ jobs:
             exit 1
           fi
           
-      - run: cd my-app
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - run: cd my-app
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
