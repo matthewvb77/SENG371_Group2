@@ -26,12 +26,16 @@ export default {
       "supportsTablet": true,
       "bundleIdentifier": "com.group2.casino",
       "googleServicesFile": "./GoogleService-Info.plist"
+      "bundleIdentifier": "com.group2.casino",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
+      "package": "com.group2.casino",
+      "googleServicesFile": "./google-services.json"
       "package": "com.group2.casino",
       "googleServicesFile": "./google-services.json"
     },
@@ -47,15 +51,5 @@ export default {
       firebaseAppId: process.env.FIREBASE_APP_ID
     },
     "scheme": "my-app"
-    },
-    "extra": {
-      firebaseApiKey: process.env.FIREBASE_API_KEY,
-      firebaseAuthDomain: process.env.FIREBASE_AUTH_DOMAIN,
-      firebaseProjectId: process.env.FIREBASE_PROJECT_ID,
-      firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-      firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
-      firebaseAppId: process.env.FIREBASE_APP_ID
-    }
-  }
   }
 }

@@ -40,6 +40,4 @@ export {
   doc,
   getDoc,
   setDoc,
-  provider,
-  signInWithPopup,
 };

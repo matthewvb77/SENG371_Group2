@@ -1,32 +1,57 @@
-import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-} from "react-native";
-import {
-  auth,
-  db,
-  doc,
-  getDoc,
-  signInWithEmailAndPassword,
-} from "../firebase";
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { auth, db, doc, getDoc, signInWithEmailAndPassword } from '../firebase';
+import * as WebBrowser from 'expo-web-browser';
+import * as Google from 'expo-auth-session/providers/google';
 
 const LoginScreen = ({ navigation }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [token, setToken] = useState('');
+  const [userInfo, setUserInfo] = useState(null);
+
+  const [request, response, promptAsync] = Google.useAuthRequest({
+    androidClientId:
+      '162824721551-9u964a98m0uk5pl7jjf8b3nfjg3ut4ut.apps.googleusercontent.com',
+    iosClientId:
+      '162824721551-inb5r4haq77q7k5rf7a2acorgppbv951.apps.googleusercontent.com',
+    expoClientId:
+      '162824721551-9u964a98m0uk5pl7jjf8b3nfjg3ut4ut.apps.googleusercontent.com',
+  });
+
+  useEffect(() => {
+    if (response?.type === 'success') {
+      setToken(response.authentication.accessToken);
+      getUserInfo();
+    }
+  }, [response, token]);
+
+  const getUserInfo = async () => {
+    try {
+      const response = await fetch(
+        'https://www.googleapis.com/userinfo/v2/me',
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      );
+      console.log('here');
+      const user = await response.json();
+      setUserInfo(user);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const handleLoginPress = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
         const uid = userCredentials.user.uid;
-        getDoc(doc(db, "users", uid)).then((docSnap) => {
+        getDoc(doc(db, 'users', uid)).then((docSnap) => {
           if (docSnap.exists()) {
             const user = docSnap.data();
-            navigation.navigate("Dashboard", { user: user });
+            navigation.navigate('Dashboard', { user: user });
           } else {
-            console.log("No such document");
+            console.log('No such document');
           }
         });
       })
@@ -76,9 +101,9 @@ const LoginScreen = ({ navigation }) => {
           Don't have an account?
           <Text
             className='font-bold'
-            onPress={() => navigation.navigate("Register")}
+            onPress={() => navigation.navigate('Register')}
           >
-            {" "}
+            {' '}
             Sign Up
           </Text>
         </Text>
