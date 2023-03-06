@@ -30,14 +30,14 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 export {
-	db,
-	auth,
-	collection,
-	addDoc,
-	createUserWithEmailAndPassword,
-	signInWithEmailAndPassword,
-	docRef,
-	doc,
-	getDoc,
-	setDoc,
+  db,
+  auth,
+  collection,
+  addDoc,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  docRef,
+  doc,
+  getDoc,
+  setDoc,
 };
