@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import LoginScreen from '../../Screens/RegistrationScreen';
+import RegistrationScreen from '../../Screens/RegistrationScreen';
 
 describe('<RegistrationScreen />', () => {
   it('renders correctly', () => {
