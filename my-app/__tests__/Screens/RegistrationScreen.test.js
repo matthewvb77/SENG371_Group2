@@ -5,7 +5,7 @@ import LoginScreen from '../../Screens/RegistrationScreen';
 
 describe('<RegistrationScreen />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(<LoginScreen />).toJSON();
+    const tree = renderer.create(<RegistrationScreen />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
