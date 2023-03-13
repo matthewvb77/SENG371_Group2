@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RegistrationScreen /> renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "flexBasis": "0%",
+        "flexGrow": 1,
+        "flexShrink": 1,
+      },
+      {
+        "paddingTop": 40,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 36,
+            "lineHeight": 40,
+          },
+          {
+            "fontWeight": "700",
+          },
+          {
+            "marginTop": 48,
+          },
+        ]
+      }
+    >
+      Register
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "marginTop": 48,
+        },
+        {
+          "paddingLeft": 20,
+          "paddingRight": 20,
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      blurOnSubmit={true}
+      inputMode="email"
+      keyboardType="email-address"
+      onChangeText={[Function]}
+      placeholder="Email"
+      returnKeyType="next"
+      style={
+        [
+          {
+            "height": 48,
+          },
+          {
+            "paddingLeft": 16,
+            "paddingRight": 16,
+          },
+          {
+            "backgroundColor": "#f3f4f6",
+          },
+          {
+            "borderBottomWidth": 1,
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+            "borderTopWidth": 1,
+          },
+          {
+            "borderBottomColor": "#6b7280",
+            "borderLeftColor": "#6b7280",
+            "borderRightColor": "#6b7280",
+            "borderTopColor": "#6b7280",
+          },
+          {
+            "borderBottomLeftRadius": 8,
+            "borderBottomRightRadius": 8,
+            "borderTopLeftRadius": 8,
+            "borderTopRightRadius": 8,
+          },
+          {
+            "marginBottom": 16,
+          },
+        ]
+      }
+      textContentType="emailAddress"
+    />
+    <TextInput
+      autoCapitalize="none"
+      blurOnSubmit={true}
+      onChangeText={[Function]}
+      placeholder="Password"
+      returnKeyType="next"
+      secureTextEntry={true}
+      style={
+        [
+          {
+            "height": 48,
+          },
+          {
+            "paddingLeft": 16,
+            "paddingRight": 16,
+          },
+          {
+            "backgroundColor": "#f3f4f6",
+          },
+          {
+            "borderBottomWidth": 1,
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+            "borderTopWidth": 1,
+          },
+          {
+            "borderBottomColor": "#6b7280",
+            "borderLeftColor": "#6b7280",
+            "borderRightColor": "#6b7280",
+            "borderTopColor": "#6b7280",
+          },
+          {
+            "borderBottomLeftRadius": 8,
+            "borderBottomRightRadius": 8,
+            "borderTopLeftRadius": 8,
+            "borderTopRightRadius": 8,
+          },
+          {
+            "marginBottom": 16,
+          },
+        ]
+      }
+      textContentType="password"
+    />
+    <TextInput
+      autoCapitalize="none"
+      blurOnSubmit={true}
+      onChangeText={[Function]}
+      placeholder="Password"
+      returnKeyType="done"
+      secureTextEntry={true}
+      style={
+        [
+          {
+            "height": 48,
+          },
+          {
+            "paddingLeft": 16,
+            "paddingRight": 16,
+          },
+          {
+            "backgroundColor": "#f3f4f6",
+          },
+          {
+            "borderBottomWidth": 1,
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+            "borderTopWidth": 1,
+          },
+          {
+            "borderBottomColor": "#6b7280",
+            "borderLeftColor": "#6b7280",
+            "borderRightColor": "#6b7280",
+            "borderTopColor": "#6b7280",
+          },
+          {
+            "borderBottomLeftRadius": 8,
+            "borderBottomRightRadius": 8,
+            "borderTopLeftRadius": 8,
+            "borderTopRightRadius": 8,
+          },
+          {
+            "marginBottom": 16,
+          },
+        ]
+      }
+      textContentType="password"
+    />
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#3b82f6",
+          "borderBottomLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderTopLeftRadius": 8,
+          "borderTopRightRadius": 8,
+          "color": "#fff",
+          "marginBottom": 16,
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 24,
+          "paddingRight": 24,
+          "paddingTop": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontSize": 18,
+              "lineHeight": 28,
+            },
+            {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Register
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 24,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 18,
+            "lineHeight": 28,
+          },
+        ]
+      }
+    >
+      Already have an account? 
+    </Text>
+    <Text
+      onPress={[Function]}
+      style={
+        [
+          {
+            "fontWeight": "700",
+          },
+          {
+            "fontSize": 18,
+            "lineHeight": 28,
+          },
+        ]
+      }
+    >
+      Login
+    </Text>
+  </View>
+</View>
+`;
