@@ -1,10 +1,8 @@
 import { getApps, initializeApp, getApp } from 'firebase/app';
-import Constants from 'expo-constants';
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  GoogleAuthProvider,
 } from 'firebase/auth';
 import {
   getFirestore,
