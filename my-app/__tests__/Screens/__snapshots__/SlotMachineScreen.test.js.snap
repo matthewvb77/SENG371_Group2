@@ -2,8 +2,601 @@
 
 exports[`<SlotMachineScreen /> renders correctly 1`] = `
 <View>
-  <Text>
-    SlotMachine
-  </Text>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "flex-end",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 14,
+            "lineHeight": 20,
+          },
+          {
+            "fontWeight": "700",
+          },
+          {
+            "marginTop": 28,
+          },
+          {
+            "marginRight": 48,
+          },
+        ]
+      }
+    >
+      Dough: $
+      200
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 36,
+            "lineHeight": 40,
+          },
+          {
+            "fontWeight": "700",
+          },
+          {
+            "marginTop": 24,
+          },
+        ]
+      }
+    >
+      Slot Machine
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 48,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        {
+          "flexDirection": "row",
+        }
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+            },
+            {
+              "backgroundColor": "green",
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "lineHeight": 32,
+              },
+              {
+                "fontWeight": "700",
+              },
+              {
+                "marginTop": 32,
+              },
+              {
+                "color": "#fff",
+              },
+            ]
+          }
+        >
+          SPIN
+        </Text>
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+            },
+            {
+              "backgroundColor": "red",
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "lineHeight": 32,
+              },
+              {
+                "fontWeight": "700",
+              },
+              {
+                "marginTop": 32,
+              },
+              {
+                "color": "#fff",
+              },
+            ]
+          }
+        >
+          SPIN
+        </Text>
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+            },
+            {
+              "backgroundColor": "yellow",
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "fontSize": 24,
+                "lineHeight": 32,
+              },
+              {
+                "fontWeight": "700",
+              },
+              {
+                "marginTop": 32,
+              },
+            ]
+          }
+        >
+          SPIN
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        [
+          {
+            "fontSize": 14,
+            "lineHeight": 20,
+          },
+          {
+            "fontWeight": "700",
+          },
+          {
+            "marginTop": 28,
+          },
+          {
+            "marginRight": 48,
+          },
+        ]
+      }
+    >
+      Current Bet: $
+      0
+    </Text>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 48,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "marginLeft": -16,
+            "marginTop": -16,
+          },
+          {
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+            },
+            {
+              "borderBottomLeftRadius": 9999,
+              "borderBottomRightRadius": 9999,
+              "borderTopLeftRadius": 9999,
+              "borderTopRightRadius": 9999,
+            },
+            {
+              "borderBottomWidth": 2,
+              "borderLeftWidth": 2,
+              "borderRightWidth": 2,
+              "borderTopWidth": 2,
+            },
+            {
+              "borderBottomColor": "#14532d",
+              "borderLeftColor": "#14532d",
+              "borderRightColor": "#14532d",
+              "borderTopColor": "#14532d",
+            },
+            [
+              {
+                "backgroundColor": "green",
+                "height": 50,
+                "width": 80,
+              },
+              [
+                {
+                  "marginLeft": 16,
+                  "marginTop": 16,
+                },
+              ],
+            ],
+          ]
+        }
+      >
+        <Text
+          onPress={[Function]}
+          style={
+            [
+              {
+                "fontSize": 36,
+                "lineHeight": 40,
+              },
+              {
+                "fontWeight": "700",
+              },
+              {
+                "marginTop": 4,
+              },
+              {
+                "color": "#fff",
+              },
+            ]
+          }
+        >
+          $1
+        </Text>
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+            },
+            {
+              "borderBottomLeftRadius": 9999,
+              "borderBottomRightRadius": 9999,
+              "borderTopLeftRadius": 9999,
+              "borderTopRightRadius": 9999,
+            },
+            {
+              "borderBottomWidth": 2,
+              "borderLeftWidth": 2,
+              "borderRightWidth": 2,
+              "borderTopWidth": 2,
+            },
+            {
+              "borderBottomColor": "#7f1d1d",
+              "borderLeftColor": "#7f1d1d",
+              "borderRightColor": "#7f1d1d",
+              "borderTopColor": "#7f1d1d",
+            },
+            [
+              {
+                "backgroundColor": "red",
+                "height": 50,
+                "width": 80,
+              },
+              [
+                {
+                  "marginLeft": 16,
+                  "marginTop": 16,
+                },
+              ],
+            ],
+          ]
+        }
+      >
+        <Text
+          onPress={[Function]}
+          style={
+            [
+              {
+                "fontSize": 36,
+                "lineHeight": 40,
+              },
+              {
+                "fontWeight": "700",
+              },
+              {
+                "marginTop": 4,
+              },
+              {
+                "color": "#fff",
+              },
+            ]
+          }
+        >
+          $5
+        </Text>
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+            },
+            {
+              "borderBottomLeftRadius": 9999,
+              "borderBottomRightRadius": 9999,
+              "borderTopLeftRadius": 9999,
+              "borderTopRightRadius": 9999,
+            },
+            {
+              "borderBottomWidth": 2,
+              "borderLeftWidth": 2,
+              "borderRightWidth": 2,
+              "borderTopWidth": 2,
+            },
+            {
+              "borderBottomColor": "#f97316",
+              "borderLeftColor": "#f97316",
+              "borderRightColor": "#f97316",
+              "borderTopColor": "#f97316",
+            },
+            [
+              {
+                "backgroundColor": "orange",
+                "height": 50,
+                "width": 80,
+              },
+              [
+                {
+                  "marginLeft": 16,
+                  "marginTop": 16,
+                },
+              ],
+            ],
+          ]
+        }
+      >
+        <Text
+          onPress={[Function]}
+          style={
+            [
+              {
+                "fontSize": 36,
+                "lineHeight": 40,
+              },
+              {
+                "fontWeight": "700",
+              },
+              {
+                "marginTop": 4,
+              },
+              {
+                "color": "#fff",
+              },
+            ]
+          }
+        >
+          $10
+        </Text>
+      </View>
+      <View
+        style={
+          [
+            {
+              "alignItems": "center",
+            },
+            {
+              "borderBottomLeftRadius": 9999,
+              "borderBottomRightRadius": 9999,
+              "borderTopLeftRadius": 9999,
+              "borderTopRightRadius": 9999,
+            },
+            {
+              "borderBottomWidth": 2,
+              "borderLeftWidth": 2,
+              "borderRightWidth": 2,
+              "borderTopWidth": 2,
+            },
+            {
+              "borderBottomColor": "#1e3a8a",
+              "borderLeftColor": "#1e3a8a",
+              "borderRightColor": "#1e3a8a",
+              "borderTopColor": "#1e3a8a",
+            },
+            [
+              {
+                "backgroundColor": "blue",
+                "height": 50,
+                "width": 80,
+              },
+              [
+                {
+                  "marginLeft": 16,
+                  "marginTop": 16,
+                },
+              ],
+            ],
+          ]
+        }
+      >
+        <Text
+          onPress={[Function]}
+          style={
+            [
+              {
+                "fontSize": 36,
+                "lineHeight": 40,
+              },
+              {
+                "fontWeight": "700",
+              },
+              {
+                "marginTop": 4,
+              },
+              {
+                "color": "#fff",
+              },
+            ]
+          }
+        >
+          $50
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 24,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "display": "flex",
+          },
+          {
+            "alignItems": "center",
+          },
+          {
+            "marginTop": 24,
+          },
+          {
+            "backgroundColor": "#f43f5e",
+          },
+          {
+            "paddingBottom": 12,
+            "paddingLeft": 12,
+            "paddingRight": 12,
+            "paddingTop": 12,
+          },
+          {
+            "borderBottomLeftRadius": 9999,
+            "borderBottomRightRadius": 9999,
+            "borderTopLeftRadius": 9999,
+            "borderTopRightRadius": 9999,
+          },
+          {
+            "borderBottomWidth": 2,
+            "borderLeftWidth": 2,
+            "borderRightWidth": 2,
+            "borderTopWidth": 2,
+          },
+          {
+            "borderBottomColor": "#be123c",
+            "borderLeftColor": "#be123c",
+            "borderRightColor": "#be123c",
+            "borderTopColor": "#be123c",
+          },
+          {
+            "width": "50%",
+          },
+        ]
+      }
+    >
+      <Text
+        onPress={[Function]}
+        style={
+          [
+            {
+              "fontWeight": "700",
+            },
+            {
+              "fontSize": 48,
+              "lineHeight": 48,
+            },
+            {
+              "color": "#fff",
+            },
+            {
+              "textAlign": "center",
+            },
+          ]
+        }
+      >
+        $pin
+      </Text>
+    </View>
+  </View>
 </View>
 `;
