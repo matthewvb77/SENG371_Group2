@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LoginScreen /> renders correctly 1`] = `
+exports[`<RegistrationScreen /> renders correctly 1`] = `
 <View
   style={
     [
@@ -43,7 +43,7 @@ exports[`<LoginScreen /> renders correctly 1`] = `
         ]
       }
     >
-      Login
+      Register
     </Text>
   </View>
   <View
@@ -107,7 +107,50 @@ exports[`<LoginScreen /> renders correctly 1`] = `
     <TextInput
       autoCapitalize="none"
       blurOnSubmit={true}
-      clearTextOnFocus={true}
+      onChangeText={[Function]}
+      placeholder="Password"
+      returnKeyType="next"
+      secureTextEntry={true}
+      style={
+        [
+          {
+            "height": 48,
+          },
+          {
+            "paddingLeft": 16,
+            "paddingRight": 16,
+          },
+          {
+            "backgroundColor": "#f3f4f6",
+          },
+          {
+            "borderBottomWidth": 1,
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+            "borderTopWidth": 1,
+          },
+          {
+            "borderBottomColor": "#6b7280",
+            "borderLeftColor": "#6b7280",
+            "borderRightColor": "#6b7280",
+            "borderTopColor": "#6b7280",
+          },
+          {
+            "borderBottomLeftRadius": 8,
+            "borderBottomRightRadius": 8,
+            "borderTopLeftRadius": 8,
+            "borderTopRightRadius": 8,
+          },
+          {
+            "marginBottom": 16,
+          },
+        ]
+      }
+      textContentType="password"
+    />
+    <TextInput
+      autoCapitalize="none"
+      blurOnSubmit={true}
       onChangeText={[Function]}
       placeholder="Password"
       returnKeyType="done"
@@ -208,7 +251,7 @@ exports[`<LoginScreen /> renders correctly 1`] = `
           ]
         }
       >
-        Login
+        Register
       </Text>
     </View>
   </View>
@@ -237,11 +280,15 @@ exports[`<LoginScreen /> renders correctly 1`] = `
         ]
       }
     >
-      Forgot Password?
+      Already have an account? 
     </Text>
     <Text
+      onPress={[Function]}
       style={
         [
+          {
+            "fontWeight": "700",
+          },
           {
             "fontSize": 18,
             "lineHeight": 28,
@@ -249,20 +296,7 @@ exports[`<LoginScreen /> renders correctly 1`] = `
         ]
       }
     >
-      Don't have an account?
-      <Text
-        onPress={[Function]}
-        style={
-          [
-            {
-              "fontWeight": "700",
-            },
-          ]
-        }
-      >
-         
-        Sign Up
-      </Text>
+      Login
     </Text>
   </View>
 </View>
