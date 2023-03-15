@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
+import React, { useState, useContext } from "react";
+import { View, Text, TextInput, Button, TouchableOpacity } from "react-native";
 import {
   setDoc,
   auth,
   db,
   doc,
   createUserWithEmailAndPassword,
-} from '../firebase';
+} from "../firebase";
 
 const RegisterScreen = ({ navigation }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const onRegisterPress = () => {
     if (password !== confirmPassword) {
@@ -25,9 +26,11 @@ const RegisterScreen = ({ navigation }) => {
         const data = {
           uid: uid,
           email,
+          username: username,
+          money: 100,
         };
-        setDoc(doc(db, 'users', uid), data)
-          .then(navigation.navigate('Dashboard', { user: data }))
+        setDoc(doc(db, "users", uid), data)
+          .then(console.log("Sign up successful"))
           .catch((error) => {
             alert(error);
           });
@@ -53,6 +56,17 @@ const RegisterScreen = ({ navigation }) => {
           returnKeyType='next'
           textContentType='emailAddress'
           onChangeText={(value) => setEmail(value)}
+        />
+        <TextInput
+          className='h-12 px-4 bg-gray-100 border border-gray-500 rounded-lg mb-4'
+          placeholder='Username'
+          autoCapitalize='none'
+          blurOnSubmit={true}
+          inputMode='email'
+          keyboardType='email-address'
+          returnKeyType='next'
+          textContentType='emailAddress'
+          onChangeText={(value) => setUsername(value)}
         />
         <TextInput
           className='h-12 px-4 bg-gray-100 border border-gray-500 rounded-lg mb-4'
@@ -85,7 +99,7 @@ const RegisterScreen = ({ navigation }) => {
         <Text className='text-lg'>Already have an account? </Text>
         <Text
           className='font-bold text-lg'
-          onPress={() => navigation.navigate('Login')}
+          onPress={() => navigation.navigate("Login")}
         >
           Login
         </Text>

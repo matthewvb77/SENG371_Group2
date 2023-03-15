@@ -1,24 +1,15 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
-import { auth, db, doc, getDoc, signInWithEmailAndPassword } from '../firebase';
+import React, { useState, useContext, createContext } from "react";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { auth, db, doc, getDoc, signInWithEmailAndPassword } from "../firebase";
 
-const LoginScreen = ({ navigation }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [userInfo, setUserInfo] = useState(null);
+const LoginScreen = ({ navigation, setUser }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLoginPress = () => {
     signInWithEmailAndPassword(auth, email, password)
-      .then((userCredentials) => {
-        const uid = userCredentials.user.uid;
-        getDoc(doc(db, 'users', uid)).then((docSnap) => {
-          if (docSnap.exists()) {
-            const user = docSnap.data();
-            navigation.navigate('Dashboard', { user: user });
-          } else {
-            console.log('No such document');
-          }
-        });
+      .then(() => {
+        console.log("Sign in successful");
       })
       .catch((error) => {
         alert(error);
@@ -66,9 +57,9 @@ const LoginScreen = ({ navigation }) => {
           Don't have an account?
           <Text
             className='font-bold'
-            onPress={() => navigation.navigate('Register')}
+            onPress={() => navigation.navigate("Register")}
           >
-            {' '}
+            {" "}
             Sign Up
           </Text>
         </Text>

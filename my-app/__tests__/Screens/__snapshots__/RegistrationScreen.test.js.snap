@@ -107,6 +107,51 @@ exports[`<RegistrationScreen /> renders correctly 1`] = `
     <TextInput
       autoCapitalize="none"
       blurOnSubmit={true}
+      inputMode="email"
+      keyboardType="email-address"
+      onChangeText={[Function]}
+      placeholder="Username"
+      returnKeyType="next"
+      style={
+        [
+          {
+            "height": 48,
+          },
+          {
+            "paddingLeft": 16,
+            "paddingRight": 16,
+          },
+          {
+            "backgroundColor": "#f3f4f6",
+          },
+          {
+            "borderBottomWidth": 1,
+            "borderLeftWidth": 1,
+            "borderRightWidth": 1,
+            "borderTopWidth": 1,
+          },
+          {
+            "borderBottomColor": "#6b7280",
+            "borderLeftColor": "#6b7280",
+            "borderRightColor": "#6b7280",
+            "borderTopColor": "#6b7280",
+          },
+          {
+            "borderBottomLeftRadius": 8,
+            "borderBottomRightRadius": 8,
+            "borderTopLeftRadius": 8,
+            "borderTopRightRadius": 8,
+          },
+          {
+            "marginBottom": 16,
+          },
+        ]
+      }
+      textContentType="emailAddress"
+    />
+    <TextInput
+      autoCapitalize="none"
+      blurOnSubmit={true}
       onChangeText={[Function]}
       placeholder="Password"
       returnKeyType="next"
