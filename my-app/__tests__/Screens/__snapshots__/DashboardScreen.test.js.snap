@@ -16,9 +16,6 @@ exports[`<DashboardScreen /> renders correctly 1`] = `
     ]
   }
 >
-  <Text>
-    Dashboard
-  </Text>
   <View
     style={
       [
@@ -32,60 +29,96 @@ exports[`<DashboardScreen /> renders correctly 1`] = `
           "marginTop": 24,
         },
         {
-          "backgroundColor": "#f43f5e",
-        },
-        {
           "paddingBottom": 12,
           "paddingLeft": 12,
           "paddingRight": 12,
           "paddingTop": 12,
         },
         {
-          "borderBottomLeftRadius": 9999,
-          "borderBottomRightRadius": 9999,
-          "borderTopLeftRadius": 9999,
-          "borderTopRightRadius": 9999,
-        },
-        {
-          "borderBottomWidth": 2,
-          "borderLeftWidth": 2,
-          "borderRightWidth": 2,
-          "borderTopWidth": 2,
-        },
-        {
-          "borderBottomColor": "#be123c",
-          "borderLeftColor": "#be123c",
-          "borderRightColor": "#be123c",
-          "borderTopColor": "#be123c",
-        },
-        {
-          "width": "50%",
+          "width": "100%",
         },
       ]
     }
   >
-    <Text
-      onPress={[Function]}
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        [
-          {
-            "fontWeight": "700",
-          },
-          {
-            "fontSize": 18,
-            "lineHeight": 28,
-          },
-          {
-            "color": "#fff",
-          },
-          {
-            "textAlign": "center",
-          },
-        ]
+        {
+          "alignItems": "center",
+          "backgroundColor": "#f43f5e",
+          "borderBottomColor": "#be123c",
+          "borderBottomLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomWidth": 2,
+          "borderLeftColor": "#be123c",
+          "borderLeftWidth": 2,
+          "borderRightColor": "#be123c",
+          "borderRightWidth": 2,
+          "borderTopColor": "#be123c",
+          "borderTopLeftRadius": 8,
+          "borderTopRightRadius": 8,
+          "borderTopWidth": 2,
+          "display": "flex",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+          "width": "50%",
+        }
       }
     >
-      Roulette
-    </Text>
+      <Text
+        style={
+          [
+            {
+              "fontWeight": "700",
+            },
+            {
+              "fontSize": 18,
+              "lineHeight": 28,
+            },
+            {
+              "color": "#fff",
+            },
+            {
+              "textAlign": "center",
+            },
+            {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Roulette
+      </Text>
+    </View>
   </View>
   <View
     style={
@@ -100,60 +133,96 @@ exports[`<DashboardScreen /> renders correctly 1`] = `
           "marginTop": 24,
         },
         {
-          "backgroundColor": "#f43f5e",
-        },
-        {
           "paddingBottom": 12,
           "paddingLeft": 12,
           "paddingRight": 12,
           "paddingTop": 12,
         },
         {
-          "borderBottomLeftRadius": 9999,
-          "borderBottomRightRadius": 9999,
-          "borderTopLeftRadius": 9999,
-          "borderTopRightRadius": 9999,
-        },
-        {
-          "borderBottomWidth": 2,
-          "borderLeftWidth": 2,
-          "borderRightWidth": 2,
-          "borderTopWidth": 2,
-        },
-        {
-          "borderBottomColor": "#be123c",
-          "borderLeftColor": "#be123c",
-          "borderRightColor": "#be123c",
-          "borderTopColor": "#be123c",
-        },
-        {
-          "width": "50%",
+          "width": "100%",
         },
       ]
     }
   >
-    <Text
-      onPress={[Function]}
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        [
-          {
-            "fontWeight": "700",
-          },
-          {
-            "fontSize": 18,
-            "lineHeight": 28,
-          },
-          {
-            "color": "#fff",
-          },
-          {
-            "textAlign": "center",
-          },
-        ]
+        {
+          "alignItems": "center",
+          "backgroundColor": "#f43f5e",
+          "borderBottomColor": "#be123c",
+          "borderBottomLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomWidth": 2,
+          "borderLeftColor": "#be123c",
+          "borderLeftWidth": 2,
+          "borderRightColor": "#be123c",
+          "borderRightWidth": 2,
+          "borderTopColor": "#be123c",
+          "borderTopLeftRadius": 8,
+          "borderTopRightRadius": 8,
+          "borderTopWidth": 2,
+          "display": "flex",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+          "width": "50%",
+        }
       }
     >
-      Slots
-    </Text>
+      <Text
+        style={
+          [
+            {
+              "fontWeight": "700",
+            },
+            {
+              "fontSize": 18,
+              "lineHeight": 28,
+            },
+            {
+              "color": "#fff",
+            },
+            {
+              "textAlign": "center",
+            },
+            {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Slots
+      </Text>
+    </View>
   </View>
   <View
     style={
@@ -168,7 +237,108 @@ exports[`<DashboardScreen /> renders correctly 1`] = `
           "marginTop": 24,
         },
         {
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+        },
+        {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
           "backgroundColor": "#f43f5e",
+          "borderBottomColor": "#be123c",
+          "borderBottomLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "borderBottomWidth": 2,
+          "borderLeftColor": "#be123c",
+          "borderLeftWidth": 2,
+          "borderRightColor": "#be123c",
+          "borderRightWidth": 2,
+          "borderTopColor": "#be123c",
+          "borderTopLeftRadius": 8,
+          "borderTopRightRadius": 8,
+          "borderTopWidth": 2,
+          "display": "flex",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+          "width": "50%",
+        }
+      }
+    >
+      <Text
+        style={
+          [
+            {
+              "fontWeight": "700",
+            },
+            {
+              "fontSize": 18,
+              "lineHeight": 28,
+            },
+            {
+              "color": "#fff",
+            },
+            {
+              "textAlign": "center",
+            },
+            {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Spin The Wheel
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      [
+        {
+          "display": "flex",
+        },
+        {
+          "alignItems": "center",
+        },
+        {
+          "marginTop": 24,
         },
         {
           "paddingBottom": 12,
@@ -177,51 +347,86 @@ exports[`<DashboardScreen /> renders correctly 1`] = `
           "paddingTop": 12,
         },
         {
-          "borderBottomLeftRadius": 9999,
-          "borderBottomRightRadius": 9999,
-          "borderTopLeftRadius": 9999,
-          "borderTopRightRadius": 9999,
-        },
-        {
-          "borderBottomWidth": 2,
-          "borderLeftWidth": 2,
-          "borderRightWidth": 2,
-          "borderTopWidth": 2,
-        },
-        {
-          "borderBottomColor": "#be123c",
-          "borderLeftColor": "#be123c",
-          "borderRightColor": "#be123c",
-          "borderTopColor": "#be123c",
-        },
-        {
-          "width": "50%",
+          "width": "100%",
         },
       ]
     }
   >
-    <Text
-      onPress={[Function]}
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
-        [
-          {
-            "fontWeight": "700",
-          },
-          {
-            "fontSize": 18,
-            "lineHeight": 28,
-          },
-          {
-            "color": "#fff",
-          },
-          {
-            "textAlign": "center",
-          },
-        ]
+        {
+          "alignItems": "center",
+          "backgroundColor": "#374151",
+          "borderBottomLeftRadius": 9999,
+          "borderBottomRightRadius": 9999,
+          "borderBottomWidth": 2,
+          "borderLeftWidth": 2,
+          "borderRightWidth": 2,
+          "borderTopLeftRadius": 9999,
+          "borderTopRightRadius": 9999,
+          "borderTopWidth": 2,
+          "display": "flex",
+          "opacity": 1,
+          "paddingBottom": 12,
+          "paddingLeft": 12,
+          "paddingRight": 12,
+          "paddingTop": 12,
+          "width": "50%",
+        }
       }
     >
-      Spin The Wheel
-    </Text>
+      <Text
+        style={
+          [
+            {
+              "fontWeight": "700",
+            },
+            {
+              "fontSize": 18,
+              "lineHeight": 28,
+            },
+            {
+              "color": "#fff",
+            },
+            {
+              "textAlign": "center",
+            },
+            {
+              "color": "#fff",
+            },
+          ]
+        }
+      >
+        Sign Out
+      </Text>
+    </View>
   </View>
 </View>
 `;
