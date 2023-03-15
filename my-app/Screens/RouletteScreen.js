@@ -2,10 +2,8 @@ import React, { useState, useContext } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import Button from "../components/Button";
 import { Diamond } from "phosphor-react-native";
-import { AuthContext } from "../App";
 
 const RouletteScreen = () => {
-  const userData = useContext(AuthContext);
   const [bet, setBet] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [result, setResult] = useState({
@@ -232,9 +230,6 @@ const RouletteScreen = () => {
         </View>
         <Text className='text-black text-center text-3xl font-bold pt-10'>
           Bet: ${bet}
-        </Text>
-        <Text className='text-black text-center text-3xl font-bold pt-10'>
-          Money: ${userData.money}
         </Text>
       </View>
     </View>

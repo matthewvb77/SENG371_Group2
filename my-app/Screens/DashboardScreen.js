@@ -1,12 +1,9 @@
 import React, { useContext } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import { auth } from "../firebase";
-import { AuthContext } from "../App";
 import Button from "../components/Button";
 
 const DashboardScreen = ({ navigation }) => {
-  const userData = useContext(AuthContext);
-
   const handleSignOut = async () => {
     try {
       await auth.signOut();
@@ -17,7 +14,6 @@ const DashboardScreen = ({ navigation }) => {
 
   return (
     <View className='flex items-center mt-6'>
-      <Text>Hello, {userData.username || userData.email}</Text>
       <View className='flex items-center mt-6 p-3 w-full'>
         <Button
           ButtonStyle='w-1/2 bg-rose-500 border-rose-700'

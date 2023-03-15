@@ -1,9 +1,7 @@
 import React, { useState, useContext } from "react";
 import { View, Text, Button, StyleSheet, Image } from "react-native";
-import { AuthContext } from "../App";
 
 const SlotMachineScreen = () => {
-  const userData = useContext(AuthContext);
   const items = ["Bat", "Duck", "Camera", "Car", "Candy", "Tree", "Oil"];
 
   var betAmount = 0;
@@ -12,7 +10,7 @@ const SlotMachineScreen = () => {
   const [text1, setText1] = useState("SPIN");
   const [text2, setText2] = useState("SPIN");
   const [text3, setText3] = useState("SPIN");
-  const [userAmount, setAmount] = useState(userData.money);
+  const [userAmount, setAmount] = useState(200);
 
   /*function to increase count by 1*/
   const increaseBetAmountBy = (value) => {
