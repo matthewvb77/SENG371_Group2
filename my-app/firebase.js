@@ -1,9 +1,10 @@
-import { getApps, initializeApp, getApp } from 'firebase/app';
+import { getApps, initializeApp, getApp } from "firebase/app";
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-} from 'firebase/auth';
+  onAuthStateChanged,
+} from "firebase/auth";
 import {
   getFirestore,
   collection,
@@ -12,15 +13,15 @@ import {
   doc,
   getDoc,
   setDoc,
-} from 'firebase/firestore';
+} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBISxRAkqhe-I16pHdXjogT_sWwSAyz4f4',
-  authDomain: 'casino-90ba4.firebaseapp.com',
-  projectId: 'casino-90ba4',
-  storageBucket: 'casino-90ba4.appspot.com',
-  messagingSenderId: '162824721551',
-  appId: '1:162824721551:web:03914cea5c3ae15266ccfa',
+  apiKey: "AIzaSyBISxRAkqhe-I16pHdXjogT_sWwSAyz4f4",
+  authDomain: "casino-90ba4.firebaseapp.com",
+  projectId: "casino-90ba4",
+  storageBucket: "casino-90ba4.appspot.com",
+  messagingSenderId: "162824721551",
+  appId: "1:162824721551:web:03914cea5c3ae15266ccfa",
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
@@ -34,6 +35,7 @@ export {
   addDoc,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
   docRef,
   doc,
   getDoc,
